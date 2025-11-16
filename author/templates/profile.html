@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}profile{% endblock title %}
+{% block content %}
+{% load crispy_forms_tags %}
+<form style="width:50%; margin:auto;" method="post">
+    <h1 class="text-center">Profile Form</h1>
+    {% csrf_token %}
+    {{form | crispy}}
+    <input class="btn btn-danger" type="submit" value="Edit Details">
+    <a href="{% url "change_pass" %}" class="btn btn-primary">Change Password</a>
+    <a href="{% url "set_pass" %}" class="btn btn-secondary">Set Password</a>
+    <a class="btn btn-primary" href="{% url "my_blogs" %}">My Blogs</a>
+</form>
+{% endblock content %}
+

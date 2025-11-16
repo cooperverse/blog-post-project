@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Welcome{% endblock title %}
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-between py-5" >
+    
+    <div class="col-md-6 p-5">
+        
+        <h1 class="display-1 fw-bold" style="font-family: serif; font-size: 5rem; line-height: 1.1;">
+            Human<br>stories & ideas
+        </h1>
+        
+        <h5 class="mt-4 mb-5" style="font-size: 1.5rem; color: #333;">
+            A place to read, write, and deepen your understanding
+        </h5>
+        
+        <a href="home" class="btn btn-dark btn-lg px-4 py-2" style="border-radius: 50px;">
+            Start reading
+        </a>
+    </div>
+    
+    <div class="col-md-6 p-0">
+        <img class="img-fluid" src="{% static "heading image.png" %}" alt="Abstract art with green flower, geometric drawing, and a hand holding a pen" style="max-height: 80vh; width: auto;">
+    </div>
+</div>
+{% endblock content %}
